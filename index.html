@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umar-Rabiu-Oyakhilome-Portfolio</title>
+  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.37/vue.min.js" 
+    integrity="sha512-Ac3+RLG5eewPQWxbb5fdcHQXyte4ZgN3nukL9q5rgjm/3+zIbwXrbzXx7oEhlugpaJOHTLJyXTrIKSIwnc7fOg==
+    " crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+
+}
+
+.Green-Tech{
+    height: 100vh;
+    width: 100%;
+    background-image: url(./web.pic/background....jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.logo{
+    color: rgb(248, 250, 248);
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+span{
+    color: red;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+
+nav ul li a{
+    color: rgb(248, 250, 248);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+
+}
+
+nav ul li a:hover{
+    color: rgb(9, 9, 241);
+    transition: 0.15s;
+}
+
+nav ul li a:active{
+    opacity: 0.8;
+    transition: 00.15s;
+    color:rgb(250, 9, 9);
+}
+
+button{
+    background-color: rgb(255, 0, 0);
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 1px rgb(192, 192, 214);
+
+}
+button:hover{
+    background-color: rgb(236, 4, 4);
+    color: white;
+    transition: background-colour, color 0.15s;
+    cursor: pointer;
+}
+
+button:active{
+    opacity: 0.8;
+    transition: opacity 0.15s;
+}
+
+.content{
+    position: absolute;
+    top: 50%;
+    left: 8*;
+    transform: translateY(-30%);
+}
+
+h1{
+    color: greenyellow;
+    margin: 20px 0px 20px;
+    font-size: 40px;
+}
+h3{
+    color: rgb(229, 245, 205);
+    font-size: 20px;
+    margin-bottom: 50px;
+    margin-top: 8p;
+}
+h4{
+    color: rgb(1, 10, 5);
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.newslatter form{
+    width: 380px;
+    max-width: 100%;
+    position: relative;
+
+}
+
+.newslatter form input:first-child{
+    display:inline-block;
+    width: 100%;
+    padding: 14px 130px 14px 15px;
+    border: 2px solid rgb(252, 5, 5);;
+    outline: none;
+    border-radius: 30px; 
+
+}
+
+.newslatter form input:last-child{
+    position: absolute;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color: rgb(252, 5, 5);
+    color: white;
+    box-shadow: 0px 0px 5px rgb(250, 252, 249), 0px 0px 15px ##858585;
+    top: 6px;
+    right: 6px;
+}
+.about{
+    width: 100%;
+    padding: 100px 0px;
+    background-color: #191919;
+}
+
+.profile-pic{
+    width: 500px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.pic{
+    width: 100%;
+    height: auto;
+}
+
+.about-text{
+    width: 500px;
+}
+.about-text h2{
+    color: white;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.about-text h5{
+    color: greenyellow;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+.about-text p{
+    color: #fcfc;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+    text-align: justify;
+}
+
+.main{
+    width: 1180px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.skills{
+    background-color: #191919;
+    width: 100%;
+    padding: 100px 0px;
+}
+.title h2{
+     color: white;
+     font-size: 75px;
+     width: 1130px;
+     margin: 30px auto;
+     text-align: center;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+
+
+}
+.card{
+    height: 365px;
+    width: 335px;
+    padding: 20px 35px;
+    background: rgb(19, 19, 19);
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+h5{
+    color: white;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.pra p{
+    color: #fcfc;
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 25px;
+}
+.card .button{
+    background-color: rgb(255, 0, 0);
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 9px 20px;
+    border-radius: 30px;
+    
+}
+
+.card .button:hover{
+    background-color: transparent;
+    border: 2px solid #f9004d;
+    cursor: pointer;
+}
+
+.My-Contact{
+    background-color: #191919;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 290px;
+    width: 100%;
+}
+
+.My-Contact p{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+
+}
+
+.My-Contact .button-5{
+    background-color: rgb(255, 0, 0);
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 1px rgb(192, 192, 214);
+}
+
+.My-Contact .button-5:hover{
+    background-color: rgb(66, 4, 4);
+    color: white;
+    transition: background-colour, color 0.15s;
+    cursor: pointer;
+}
+
+.My-Contact .button-5:active{
+    opacity: 0.8;
+    transition: opacity 0.15s;
+}
+
+
+.Search-box{
+    font-size: 30px;
+    display: block;
+    margin-left: 50px;
+}
+
+.youtube-football{
+    display: inline-block;
+    font-family: arial;
+    width: 450px;
+    vertical-align: top;
+    margin: 50px;
+}
+
+.image-1,.image-2{
+    width: 100%;
+    margin-top: 30px;
+    
+}
+.portfra{
+    width: 350px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+    line-height: 25px;
+    color: white;
+
+}
+.sum{
+    color: #fcfc;
+    font-size: 12px;
+    margin-bottom: 2px;
+    margin-top: 5px;
+    
+}
+.hours{
+    margin-top: 5px;
+    font-size: 12px;
+    color:  #fcfc
+}
+.thumnail-1{
+    width: 60px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    border-radius: 50px;
+}
+.video-text{
+    display: inline-block;
+    width: 250px;
+    margin-top: 0;
+}
+.div-2{
+    margin-top: 5px;
+
+}
+
+.Toturial,{
+    display: inline-block;
+    font-family: arial;
+    width: 400px;
+    vertical-align: top;
+    margin-left: 5px;
+}
+.thumnail-2{
+    width: 60px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    border-radius: 50px; 
+}
+
+.Section{
+   padding-top: 20px;
+   padding-bottom: 100px;
+    background: rgb(19, 19, 19);
+  
+}
+
+footer{
+    position: relative;
+    height: 400px;
+    width: 100%;
+     background: rgb(10 10 10);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+   
+}
+.NAME{
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+}
+.des{
+    font-size: 17px;
+    color: #fcfc;
+    width: 500px;
+    text-align: center;
+    line-height: 26px; 
+}
+
+.social{
+  
+   
+}
+.copy{
+    color: white;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+    </style>
+</head>
+<body>
+<! ----Green-Tech Section start ----> 
+
+<ul>
+    <li> <a href="#">Home</a></li>
+    <li> <a href="#">About Me</a></li>
+    <li> <a href="#">My Skills</a></li>
+    <li> <a href="#">My Project</a></li>
+    <li> <a href="#"> My Contact</a></li>
+</ul>
+<div id="Home">
+    <div class="Green-Tech">
+        <nav>
+            <h2 class="logo"> Port<span>folio</span></h2>
+            <ul>
+                <li> <a href="#">Home</a></li>
+                <li> <a href="#">About Me</a></li>
+                <li> <a href="#">My Skills</a></li>
+                <li> <a href="#">My Project</a></li>
+                <li> <a href="#"> My Contact</a></li>
+            </ul>
+            <a href="#" class="button"><button>Subscribe</button></a>
+        </nav>
+    <div class="content">
+        <h4> Hello, my name is</h3>
+        <h1> Umar Rabiu <span>OYAKHILOME</span> </h1>
+        <h3> Software Developer &#47;  Business Manager</h4>
+        <div class="newslatter">
+            <form>
+                <input type="email" name="email" id="mail" placeholder="Enter Your Email">
+                <input type="submit" name="submit" value="Lets Start"
+            </form>
+
+        </div>
+
+    </div>
+    </div>
+
+</div>   
+
+
+< ! -- About Me Section Start -->
+    
+<div id="About Me">
+    <section class="about">
+        <div class="main">
+            <div class="profile-pic">
+                <img class="pic" src="./web.pic/BOW.jpg">
+            </div>
+        
+            <div class="about-text">
+                <h2> About Me</h2>
+                <h5> Developer & Manager</h5>
+                <p>
+                    I am a Software Development Instuctor and a Business Development Service Provider, I can contribute in the development of any Software
+                    throughout the software lifeclycle. that is from the planning stage, to the UX design state, Coding State as well as the Commercialization State of the product.
+                    As a graduate of Business Administration and Management 2014, and an active entreprenuer, who owns a business enterprise. I can also 
+                    contribute in the growth and  development from any business organization either a start-up business or an existing business. I have also proved to be a good instructor 
+                    from my previous works and training.   
+                </p>
+                <button  type="button">Let's Talk</button>
+            </div>
+
+        </div>
+    </section>
+</div>
+    
+
+ < !----- Skills start ----->
+<div id="My Skills">
+    <div class="skills">
+        <div class="title">
+            <h2> My Skills</h2>
+
+        </div>
+        <div class="box">
+            <div class="card">
+                <i class="fas fa-bars"></i>
+                <h5>Software Development Skillls</h5>
+                <div class="pra">
+                    <p>
+                        Softwares should be built with two primary goals; firstly, it needs to work across all devices
+                        such as Laptops, Tablets, Phones among others. secondly, it need to have usability so as to meet 
+                        user expectations. Soft...........
+                    </p>
+                    <p style="text-align:center ;">
+                        <a class="button" href="#">Read More</a>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="box">
+            <div class="card">
+                <i class="fas fa-bars"></i>
+                <h5>Business Development Services Skills</h5>
+                <div class="pra">
+                    <p>
+                        People need to be guided on hhow modern businesses operate, from the choice of business that is trending 
+                        to understanding that every business products have a lifecycle. This .........    </p>
+                    <p style="text-align:center ;">
+                        <a class="button" href="#">Read More</a>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="box">
+            <div class="card">
+                <i class="fas fa-bars"></i>
+                <h5>Entrepreneurship Development Skills</h5>
+                <div class="pra">
+                    <p>
+                        I also have morethan 10 practical skills in 4 different field of studies which i can use to engage 
+                        most youth and women across the country. This skills.....
+                    </p>
+                    <p style="text-align:center ;">
+                        <a class="button" href="#">Read More</a>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+       
+    </div>
+
+</div>
+    
+ < ! -- My Project  Section Start -->
+
+ <div id="My Projec">
+    <div class="Section">
+        <input class="Search-box", placeholder="Search">
+       
+        <div class="youtube-football">
+            <div>
+                <img class="image-1" src="./web.pic/Modelling.jpg">
+            </div>
+            <div class="div-2">
+                
+                <div>
+                    <img class="thumnail-1" src="./Thumnail/thumnail.jpg"
+                </div>
+                    
+    
+                <div class="video-text">
+                    <div>
+                        <p class="portfra">
+                          Introduction to 3D Modeling and Animation Training with ABNB Global Innovation : 
+                          South-West Region, Nigeria
+                        </p>
+                    </div>
+                    
+                  <div>
+                    <p class="sum">
+                        N-Power 
+                    </p>
+                  </div>
+                  <div>
+                    <p class="hours">
+                        1.4M views &#183; 3 years ago
+                    </p>
+                  </div>
+                   
+                   
+        
+                </div>
+                
+               
+            </div>
+           
+           
+        </div>
+        </div>
+    
+    
+    
+        <div class="youtube-football">
+            <div>
+                <img class="image-2" src="./web.pic/Umar Rabiu Oyakhilome .jpg">
+            </div>   
+            <div-3>
+                 
+                <div>
+                    <img class="thumnail-2" src="./Thumnail/Screenshot 2022-06-20 123341.jpg"
+                </div>
+                <div class="video-text">
+                    <div>
+                        <p class="portfra">
+                             Introduction to Software Development &#8722; Online Course for Beginners (2022)
+                        </p>
+                    </div>
+                    
+                  <div>
+                    <p class="sum">
+                        TIC Bauchi 
+                    </p>
+                  </div>
+                  <div>
+                    <p class="hours">
+                        900k views &#183; 1 month ago
+                    </p>
+                  </div>
+                </div>
+               
+                    
+                   
+            </div>
+           
+        </div>
+            
+       
+        <div class="youtube-football">
+            <div>
+                <img class="image-2" src="./web.pic/NexuxPay Mobile Banking App (Community) (11)_3.jpg">
+            </div>   
+            <div-4>
+                 
+                <div>
+                    <img class="thumnail-2" src="./Thumnail/Screenshot 2022-06-20 123341.jpg"
+                </div>
+                <div class="video-text">
+                    <div>
+                        <p class="portfra">
+                            Build a Complete Green-Tech 9ja Products Store application as a Team Lead with Technology Incubation Center
+                        </p>
+                    </div>
+                    
+                  <div>
+                    <p class="sum">
+                        Green-Tech
+                    </p>
+                  </div>
+                  <div>
+                    <p class="hours">
+                        240k views &#183; 1 year ago
+                    </p>
+                  </div>
+                </div>
+               
+                    
+                   
+            </div>
+           
+        </div>
+    
+    
+        <div class="youtube-football">
+            <div>
+                <img class="image-2" src="./web.pic/Nutriful.jpg">
+            </div>   
+            <div-4>
+                 
+                <div>
+                    <img class="thumnail-2" src="./Thumnail/App logo.jpg"
+                </div>
+                <div class="video-text">
+                    <div>
+                        <p class="portfra">
+                            Introduction to Green&#8722;Tech Visionary Enterprise &#8722;Bauchi State
+                        </p>
+                    </div>
+                    
+                  <div>
+                    <p class="sum">
+                        TIC Bauchi
+                    </p>
+                  </div>
+                  <div>
+                    <p class="hours">
+                        200k views &#183; 8 months ago
+                    </p>
+                  </div>
+                </div>
+               
+                    
+                   
+            </div>
+           
+        </div>
+            
+        
+        
+    
+        <div class=" youtube-football">
+            <div>
+                <img class="image-2" src="./web.pic/Wooden Cup.jpg">
+            </div>   
+            <div-4>
+                 
+                <div>
+                    <img class="thumnail-2" src="./Thumnail/thumnail.jpg"
+                </div>
+                <div class="video-text">
+                    <div>
+                        <p class="portfra">
+                           3D Modelling Practice 
+                        </p>
+                    </div>
+                    
+                  <div>
+                    <p class="sum">
+                        Umar-Rabiu-Oyakhilome-Portfolio 
+                    </p>
+                  </div>
+                  <div>
+                    <p class="hours">
+                        779k views &#183; 4 months ago
+                    </p>
+                  </div>
+                </div>
+               
+                    
+                   
+            </div>
+           
+        </div>
+            
+        <div class="youtube-football">
+            <div>
+                <img class="image-2" src="./web.pic/Training and Exhibition.jpg">
+            </div>   
+            <div-4>
+                 
+                <div>
+                    <img class="thumnail-2" src="./Thumnail/thumnail.jpg"
+                </div>
+                <div class="video-text">
+                    <div>
+                        <p class="portfra">
+                            Training &#47; Exibition with Meda-Nigeria &#8722; Soy Utilisation Capacity Training (2019)
+                        </p>
+                    </div>
+                    
+                  <div>
+                    <p class="sum">
+                        NBTI
+                    </p>
+                  </div>
+                  <div>
+                    <p class="hours">
+                        779k views &#183; 4 months ago
+                    </p>
+                  </div>
+                </div>
+               
+            
+                   
+            </div>
+           
+        </div>
+    
+        <p style="text-align:center ;">
+            <a class="button" href="#">View More</a>
+        </p>
+     </div>
+    
+    
+    
+
+ </div>
+ 
+
+ <--------My Contact-------->
+    <div id="My Contact">
+        <div class="My-Contact">
+            <p>
+                Contact me to give you the best services you deserve
+            </p>
+            <a class="button-5" href="#">Hire Me</a>
+        </div>
+       
+
+    </div>
+
+   
+   
+   
+    <--------Footer Start-------->   
+        <footer>
+            <p class="NAME"> Umar Rabiu Oyakhilome</p>
+            <p class="des"> Software Development Packages, Training, Business Development Services -
+                 Please click on the link below to 
+                subscribe to my channel:
+            </p>
+            <div class="social">
+               <button class="facebook"> facebook</a> </button>
+               <button class="Linkedin"> Linkedin </button>
+               <button class="Tiktalk"> Tiktalk </button>
+               <button class="Twitter">Twitter </button>
+            
+
+            </div>
+            <p class="copy">  <span>Copyright by</span>Umar Rabiu Oyakhilome</p>
+        </footer>
+</body>
+</html>
